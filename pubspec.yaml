@@ -1,0 +1,6 @@
+name: react-dart_perf
+version: 0.0.1
+description: React-Dart Perf
+dependencies:
+  browser: any
+  react: any
