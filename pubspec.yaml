@@ -4,3 +4,4 @@ description: React-Dart Perf
 dependencies:
   browser: any
   react: any
+  uix: any

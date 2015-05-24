@@ -15,16 +15,16 @@ Sample code to compare React component perf between JavaScript and React-Dart
   - `Dart-2`: JS-2 as implemented with React-Dart
   - `Dart-3`: JS-3 as implemented with React-Dart
 
+- Implemented matching UIX components as a performance comparison (`UIX-1`, `UIX-2`, `UIX-3`)
+
 ## Basic Performance Results
 
-Demo     | FPS
--------- | ------
-`JS-1`   | 26
-`JS-2`   | 24
-`JS-3`   | 22
-`Dart-1` | 18
-`Dart-2` | 9
-`Dart-3` | 5
+Animation of 250 'Dots' in Chrome (fps)
+Hierarchy Complexity | React (JavaScript) | React-Dart | UIX
+-------------------- | ------------------ | ---------- | ---
+1                    | 26                 | 18         | 50
+2                    | 24                 | 9          | 43
+3                    | 22                 | 5          | 40
 
 - In JS, performance degrades slightly as React component hierarchy increases in complexity
 - In React-Dart, performance degrades significantly faster as React component hierarchy increases in complexity
