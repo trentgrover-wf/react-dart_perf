@@ -20,6 +20,7 @@ Sample code to compare React component perf between JavaScript and React-Dart
 ## Basic Performance Results
 
 Animation of 250 'Dots' in Chrome (fps)
+
 Hierarchy Complexity | React (JavaScript) | React-Dart | UIX
 -------------------- | ------------------ | ---------- | ---
 1                    | 26                 | 18         | 50
