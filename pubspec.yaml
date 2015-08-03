@@ -5,7 +5,4 @@ dependencies:
   browser: any
   react: any
   uix: any
-  squares:
-    git:
-      url: git@github.com:jacehensley-wf/squares.git
-      ref: 4289e5758931f300e8df89596877a547f0f159bd
+  tiles: any

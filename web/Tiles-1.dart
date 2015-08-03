@@ -2,8 +2,8 @@ import 'dart:html';
 import 'dart:math';
 import 'dart:async';
 
-import 'package:squares/squares.dart';
-import 'package:squares/squares_browser.dart';
+import 'package:tiles/tiles.dart';
+import 'package:tiles/tiles_browser.dart';
 
 void main() {
   initTilesBrowserConfiguration();
@@ -11,7 +11,7 @@ void main() {
   num counter = 0;
 
   void reactAnimate() {
-    mountComponent(boxesView()..props = {'count': counter++},
+    mountComponent(boxesView(props: {'count': counter++}),
         querySelector('#example-container'));
     new Timer(Duration.ZERO, reactAnimate);
   }
@@ -20,11 +20,11 @@ void main() {
   new Timer(Duration.ZERO, reactAnimate);
 }
 
-ComponentDescriptionFactory boxesView = registerComponent(
-    ({props, children}) => new BoxesView()
-  ..props = props
-  ..children = children);
+ComponentDescriptionFactory boxesView = registerComponent(({props, children}) => new BoxesView(props, children));
 class BoxesView extends Component {
+
+  BoxesView(props, [children]): super(props, children);
+
   render() {
     var N = 250;
     var count = this.props['count'] + 1;
@@ -32,11 +32,11 @@ class BoxesView extends Component {
     for (var i = 0; i < N; i++) {
       var inCount = count + i;
       boxes.add(div(
-          props: {'className': 'box-view'},
+          props: {'class': 'box-view'},
           children: [
         div(
             props: {
-          'className': 'box',
+          'class': 'box',
           'style':
               'top:${sin(inCount / 10) * 10}px; left:${cos(inCount / 10) * 10}px; background:rgb(0, 0, ${inCount % 255})'
         },
