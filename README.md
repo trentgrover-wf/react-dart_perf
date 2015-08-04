@@ -23,9 +23,9 @@ Animation of 250 'Dots' in Chrome (fps)
 
 Hierarchy Complexity | React (JavaScript) | React-Dart | UIX | Tiles
 -------------------- | ------------------ | ---------- | --- | -----
-1                    | 26                 | 18         | 50  | 36
-2                    | 24                 | 9          | 43  | 33
-3                    | 22                 | 5          | 40  | 30
+1                    | 42                 | 23         | 50  | 36
+2                    | 41                 | 11         | 43  | 33
+3                    | 40                 | 8          | 40  | 30
 
 - In JS, performance degrades slightly as React component hierarchy increases in complexity
 - In React-Dart, performance degrades significantly faster as React component hierarchy increases in complexity
