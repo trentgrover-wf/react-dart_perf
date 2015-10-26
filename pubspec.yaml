@@ -3,6 +3,7 @@ version: 0.0.1
 description: React-Dart Perf
 dependencies:
   browser: any
-  react: any
+  react:
+    git: https://github.com/danschultz/react.dart.git
   uix: any
   tiles: any

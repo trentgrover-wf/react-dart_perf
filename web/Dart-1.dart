@@ -3,10 +3,8 @@ import 'dart:math';
 import 'dart:async';
 
 import 'package:react/react.dart' as react;
-import 'package:react/react_client.dart' as reactClient;
 
 void main() {
-  reactClient.setClientConfiguration();
 
   num counter = 0;
 
@@ -20,9 +18,9 @@ void main() {
   new Timer(Duration.ZERO, reactAnimate);
 }
 
-var boxesView = react.registerComponent(() => new BoxesView());
+react.ComponentFactory boxesView = react.registerComponent(() => new BoxesView());
 class BoxesView extends react.Component {
-  render() {
+  react.ReactElement render() {
     var N = 250;
     var count = this.props['count'] + 1;
     var boxes = [];

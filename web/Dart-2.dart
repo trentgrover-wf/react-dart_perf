@@ -3,11 +3,8 @@ import 'dart:math';
 import 'dart:async';
 
 import 'package:react/react.dart' as react;
-import 'package:react/react_client.dart' as reactClient;
 
 void main() {
-  reactClient.setClientConfiguration();
-
   num counter = 0;
 
   void reactAnimate() {
@@ -20,9 +17,9 @@ void main() {
   new Timer(Duration.ZERO, reactAnimate);
 }
 
-var boxView = react.registerComponent(() => new BoxView());
+react.ComponentFactory boxView = react.registerComponent(() => new BoxView());
 class BoxView extends react.Component {
-  render() {
+  react.ReactElement render() {
     var count = this.props['count'];
     return (react.div({'className': "box-view"}, react.div({
       'className': 'box',
@@ -35,9 +32,9 @@ class BoxView extends react.Component {
   }
 }
 
-var boxesView = react.registerComponent(() => new BoxesView());
+react.ComponentFactory boxesView = react.registerComponent(() => new BoxesView());
 class BoxesView extends react.Component {
-  render() {
+  react.ReactElement render() {
     var N = 250;
     var boxes = [];
     for (var i = 0; i < N; i++) {
